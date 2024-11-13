@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "862619261319",
+    "project_id": "viewfinder-9e495",
+    "storage_bucket": "viewfinder-9e495.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862619261319:android:60b6f92473e5ed52a6db22",
+        "android_client_info": {
+          "package_name": "com.example.learning2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBspv3EhA0F2jmuT7XmINKi2v5RK_6OQUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
