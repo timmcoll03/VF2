@@ -1,0 +1,52 @@
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.util.AttributeSet;
+import android.view.View;
+
+public class CustomViewfinder extends View {
+    private int viewfinderWidth;
+    private int viewfinderHeight;
+    private int maxWidth, maxHeight;
+    private Paint paint;
+
+    public CustomViewfinder(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        paint = new Paint();
+        paint.setColor(Color.GREEN); // Change to the desired viewfinder color
+        paint.setStrokeWidth(5);
+    }
+
+    // Set the maximum width and height for the viewfinder based on screen size
+    public void setMaxSize(int maxWidth, int maxHeight) {
+        this.maxWidth = maxWidth;
+        this.maxHeight = maxHeight;
+        updateViewfinderSize();
+    }
+
+    // Update the size of the viewfinder (maintains aspect ratio)
+    public void updateViewfinderSize() {
+        float aspectRatio = 16f / 9f; // Use any aspect ratio you like
+        if (maxWidth > 0 && maxHeight > 0) {
+            if (maxWidth * aspectRatio <= maxHeight) {
+                viewfinderWidth = maxWidth;
+                viewfinderHeight = (int) (viewfinderWidth / aspectRatio);
+            } else {
+                viewfinderHeight = maxHeight;
+                viewfinderWidth = (int) (viewfinderHeight * aspectRatio);
+            }
+        }
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+        // Draw the viewfinder rectangle
+        int left = getWidth() - viewfinderWidth - 50;  // Position at bottom-right with margin
+        int top = getHeight() - viewfinderHeight - 50;
+        canvas.drawRect(left, top, left + viewfinderWidth, top + viewfinderHeight, paint);
+    }
+}
+
