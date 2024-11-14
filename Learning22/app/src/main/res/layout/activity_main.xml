@@ -81,14 +81,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/SliderValue"
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
         android:layout_width="237dp"
         android:layout_height="124dp"
         android:layout_marginStart="416dp"
         android:layout_marginTop="160dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+<!--    <ImageView-->
+
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/SliderValue"-->
+<!--        android:layout_width="237dp"-->
+<!--        android:layout_height="124dp"-->
+<!--        android:layout_marginStart="416dp"-->
+<!--        android:layout_marginTop="160dp"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

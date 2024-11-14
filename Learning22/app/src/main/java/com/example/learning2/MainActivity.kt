@@ -1,6 +1,7 @@
 package com.example.learning2
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
@@ -8,21 +9,26 @@ import android.widget.SeekBar
 
 import android.widget.TextView
 import android.widget.Toast
+import com.example.learning2.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
 
         // Initialize the SeekBar (Slider)
         val slider = findViewById<SeekBar>(R.id.seekBar)
-        val textView = findViewById<TextView>(R.id.SliderValue)
         val visionComp = findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.visioncomp)
 
         slider.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                textView.text = "Slider Value: $progress"
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
