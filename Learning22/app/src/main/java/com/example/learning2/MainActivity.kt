@@ -1,5 +1,6 @@
 package com.example.learning2
 
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,11 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import com.example.learning2.databinding.ActivityMainBinding
+import com.google.firebase.ml.vision.FirebaseVision
+import com.google.firebase.ml.vision.common.FirebaseVisionImage
+import android.graphics.BitmapFactory
+import android.widget.ImageView
+import java.io.File
 
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +49,27 @@ class MainActivity : AppCompatActivity() {
             val enteredText = visionComp.text.toString()
             Toast.makeText(this, enteredText, Toast.LENGTH_SHORT).show()
         }
+//        val path = "C:\Users\timot\Downloads\sample_1280×853.bmp"
+//        val file = File(path)
+//        val bitmap = null
+//        if (file.exists()) {
+//            bitmap = BitmapFactory.decodeFile(path)
+//        }
+//
+//        val detector = FirebaseVision.getInstance().visionCloudLandmarkDetector
+//        val image = FirebaseVisionImage.fromBitmap(bitmap)
+//        detector.detectInImage(image)
+//            .addOnSuccessListener {
+//                // Task completed successfully
+//            }
+//            .addOnFailureListener {
+//                // Task failed with an exception
+//            }
 
     }
+
+
+
 }
+
 
