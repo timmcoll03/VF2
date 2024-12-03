@@ -10,15 +10,25 @@
 
     <!-- EditText (Input) -->
 
+    <Button
+        android:id="@+id/speech"
+        android:layout_width="128dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="64dp"
+        android:text="Speech"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flash" />
+
     <TextView
         android:id="@+id/titletext"
         android:layout_width="132dp"
         android:layout_height="43dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:text="ViewFinder"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,28 +36,29 @@
         android:id="@+id/flash"
         android:layout_width="127dp"
         android:layout_height="117dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="48dp"
         android:text="Flash"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titletext" />
 
-    <Button
-        android:id="@+id/speech"
-        android:layout_width="128dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
-        android:text="Speech"
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="323dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="208dp"
+        android:rotation="90"
+        android:rotationX="2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/flash" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
         android:id="@+id/camswitch"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:text="Camera"
         app:layout_constraintStart_toEndOf="@+id/visioncomp"
@@ -70,25 +81,19 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="323dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="188dp"
-        android:rotation="90"
-        android:rotationX="2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/SliderValue"
-        android:layout_width="237dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="416dp"
-        android:layout_marginTop="160dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="442dp"
+        android:layout_height="271dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/flash"
+        app:layout_constraintTop_toBottomOf="@+id/visioncomp"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
